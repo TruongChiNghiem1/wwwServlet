@@ -1,0 +1,28 @@
+package impl;
+
+import java.util.List;
+
+import DAO.NhanVienDAO;
+import entities.NhanVien;
+
+public class NhanVienImpl implements NhanVienDAO{
+
+	@Override
+	public List<NhanVien> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean insert(NhanVien nhanVien) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean delete(int maNV) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

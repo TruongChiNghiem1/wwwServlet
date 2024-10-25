@@ -1,0 +1,134 @@
+package entities;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
+
+@Entity
+public class NhanVien {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int maNV;
+	
+	@NotEmpty(message = "Tên nhân viên không được bỏ trống")
+	@Size(max = 50, message = "Tên nhân viên không được quá 50 ký tự")
+	private String tenNV;
+	
+	@NotEmpty(message = "Email không được bỏ trống")
+	@Pattern(regexp = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$", message = "Email phải đúng định dạng")
+	private String email;
+	
+	private String diaChi;
+
+	@NotEmpty(message = "Số điện thoại không được bỏ trống")
+	private String soDienThoai;
+	
+	@ManyToOne
+	@JoinColumn(name = "maPhongBan")
+	private PhongBan phongBan;
+
+	public NhanVien() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	
+	
+
+	public NhanVien(
+			@NotEmpty(message = "Tên nhân viên không được bỏ trống") @Size(max = 50, message = "Tên nhân viên không được quá 50 ký tự") String tenNV,
+			@NotEmpty(message = "Email không được bỏ trống") @Pattern(regexp = "/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/", message = "Email phải đúng định dạng") String email,
+			String diaChi, @NotEmpty(message = "Số điện thoại không được bỏ trống") String soDienThoai,
+			PhongBan phongBan) {
+		super();
+		this.tenNV = tenNV;
+		this.email = email;
+		this.diaChi = diaChi;
+		this.soDienThoai = soDienThoai;
+		this.phongBan = phongBan;
+	}
+
+
+
+	public NhanVien(int maNV,
+			@NotEmpty(message = "Tên nhân viên không được bỏ trống") @Size(max = 50, message = "Tên nhân viên không được quá 50 ký tự") String tenNV,
+			@NotEmpty(message = "Email không được bỏ trống") @Pattern(regexp = "/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/", message = "Email phải đúng định dạng") String email,
+			String diaChi, @NotEmpty(message = "Số điện thoại không được bỏ trống") String soDienThoai,
+			PhongBan phongBan) {
+		super();
+		this.maNV = maNV;
+		this.tenNV = tenNV;
+		this.email = email;
+		this.diaChi = diaChi;
+		this.soDienThoai = soDienThoai;
+		this.phongBan = phongBan;
+	}
+
+
+
+	public int getMaNV() {
+		return maNV;
+	}
+
+	public void setMaNV(int maNV) {
+		this.maNV = maNV;
+	}
+
+	public String getTenNV() {
+		return tenNV;
+	}
+
+	public void setTenNV(String tenNV) {
+		this.tenNV = tenNV;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getDiaChi() {
+		return diaChi;
+	}
+
+	public void setDiaChi(String diaChi) {
+		this.diaChi = diaChi;
+	}
+
+	public String getSoDienThoai() {
+		return soDienThoai;
+	}
+
+	public void setSoDienThoai(String soDienThoai) {
+		this.soDienThoai = soDienThoai;
+	}
+
+	public PhongBan getPhongBan() {
+		return phongBan;
+	}
+
+	public void setPhongBan(PhongBan phongBan) {
+		this.phongBan = phongBan;
+	}
+
+
+
+
+	@Override
+	public String toString() {
+		return "NhanVien [maNV=" + maNV + ", tenNV=" + tenNV + ", email=" + email + ", diaChi=" + diaChi
+				+ ", soDienThoai=" + soDienThoai + ", phongBan=" + phongBan + "]";
+	}
+
+	
+	
+}

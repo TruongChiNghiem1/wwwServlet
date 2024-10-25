@@ -1,0 +1,38 @@
+package impl;
+
+import java.util.List;
+
+import DAO.NhanVienDAO;
+import entities.NhanVien;
+import jakarta.persistence.EntityManager;
+
+public class NhanVienImpl implements NhanVienDAO{
+	private EntityManager eManager;
+	
+	
+	
+	public NhanVienImpl(EntityManager eManager) {
+		super();
+		this.eManager = eManager;
+	}
+
+	@Override
+	public List<NhanVien> getAll() {
+		// TODO Auto-generated method stub
+		eManager.clear();
+		return eManager.createQuery("from NhanVien", NhanVien.class).getResultList();
+	}
+
+	@Override
+	public boolean insert(NhanVien nhanVien) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean delete(int maNV) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

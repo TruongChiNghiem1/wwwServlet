@@ -1,0 +1,9 @@
+package impl;
+
+import java.util.List;
+
+import entities.PhongBan;
+
+public class PhongBanImpl {
+	List<PhongBan> getAll();
+}

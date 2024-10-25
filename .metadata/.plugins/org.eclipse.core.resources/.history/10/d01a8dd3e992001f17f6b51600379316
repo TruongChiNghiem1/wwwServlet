@@ -1,0 +1,7 @@
+package DAO;
+
+public interface NhanVienDAO {
+	List<NhanVien> getAll();
+	boolean insert(NhanVien nhanVien);
+	boolean delete(int maNV);
+}

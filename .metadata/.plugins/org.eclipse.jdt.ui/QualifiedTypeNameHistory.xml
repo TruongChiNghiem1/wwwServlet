@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="jakarta.persistence.EntityManagerFactory"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Persistence"/>
+    <fullyQualifiedTypeName name="jakarta.validation.constraints.AssertFalse.List"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.ServletException"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.ServletConfig"/>
+    <fullyQualifiedTypeName name="DAO.NhanVienDAO"/>
+    <fullyQualifiedTypeName name="impl.NhanVienImpl"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="jakarta.validation.ConstraintViolation"/>
+    <fullyQualifiedTypeName name="entities.NhanVien"/>
+    <fullyQualifiedTypeName name="utils.EntityManagerFactoryProvider"/>
+    <fullyQualifiedTypeName name="service.ServiceNhanVien"/>
+    <fullyQualifiedTypeName name="jakarta.validation.ValidatorFactory"/>
+    <fullyQualifiedTypeName name="jakarta.validation.Validation"/>
+    <fullyQualifiedTypeName name="jakarta.validation.Validator"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.EntityManager"/>
+    <fullyQualifiedTypeName name="impl.PhongBanImpl"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="DAO.PhongBanDAO"/>
+    <fullyQualifiedTypeName name="entities.PhongBan"/>
+    <fullyQualifiedTypeName name="service.ServicePhongBan"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebServlet"/>
+</qualifiedTypeNameHistroy>
